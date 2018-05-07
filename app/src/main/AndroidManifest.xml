@@ -19,7 +19,8 @@
         <activity android:name=".SimpleStringsListView" />
         <activity android:name=".SimpleObjectArrayListView" />
         <activity android:name=".UpdateArrayList" />
-        <activity android:name=".EmailExample"></activity>
+        <activity android:name=".EmailExample" />
+        <activity android:name=".CartoonCharRecylcerViewExample"></activity>
     </application>
 
 </manifest>

@@ -44,5 +44,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        findViewById(R.id.bRecyclerView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, CartoonCharRecylcerViewExample.class);
+                startActivity(i);
+            }
+        });
     }
 }
