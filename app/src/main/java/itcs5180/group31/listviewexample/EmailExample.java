@@ -15,7 +15,7 @@ public class EmailExample extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email_example);
-        setTitle("Email Example");
+        setTitle("List View Email Example");
 
         emails.add(new Email("this is an example", "Joe", "Bob", "Hey, just wanted you to have an example", new Date()));
         emails.add(new Email("Andromeda", "Dylan Hunt", "all", "We have a mission to restore peace to the galaxy.", new Date()));
