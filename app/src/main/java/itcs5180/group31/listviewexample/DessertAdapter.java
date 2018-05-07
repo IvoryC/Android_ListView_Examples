@@ -3,6 +3,7 @@ package itcs5180.group31.listviewexample;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +40,8 @@ public class DessertAdapter extends ArrayAdapter<Dessert> {
         tvName.setText(dessert.name);
         tvCalories.setText(String.valueOf(dessert.calories));
         if (dessert.imgUrl != null){
-            Picasso.with(getContext()).load(dessert.imgUrl).into(imageView);
+            Log.d("picasso", "placing image:" + dessert.imgUrl);
+            Picasso.with(getContext()).load(dessert.imgUrl).fit().into(imageView);
         }
 
         return convertView;

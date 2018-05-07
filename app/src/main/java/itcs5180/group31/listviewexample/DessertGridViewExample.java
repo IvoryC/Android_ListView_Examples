@@ -30,6 +30,18 @@ public class DessertGridViewExample extends AppCompatActivity {
         desserts.add(new Dessert("Strawberries", 300));
         desserts.add(new Dessert("Pumpkin Pie", 450));
         desserts.get(desserts.size()-1).imgUrl = "http://www.chowstatic.com/assets/recipe_photos/30175_easy_pumpkin_pie.jpg";
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
+        desserts.add(new Dessert("Pumpkin Pie", 450));
 
         GridView gridView = findViewById(R.id.gridView);
         final DessertAdapter adapter = new DessertAdapter(this, R.layout.dessert_item_grid_layout, desserts);
