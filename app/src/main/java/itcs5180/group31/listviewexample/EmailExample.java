@@ -19,14 +19,14 @@ public class EmailExample extends AppCompatActivity {
 
         emails.add(new Email("this is an example", "Joe", "Bob", "Hey, just wanted you to have an example", new Date()));
         emails.add(new Email("Andromeda", "Dylan Hunt", "all", "We have a mission to restore peace to the galaxy.", new Date()));
-        emails.add(new Email("bluffing", "Jim", "Spoke", "Not chess, Mr. Spock. Poker!", new Date()));
+        emails.add(new Email("bluffing", "Jim", "Spock", "Not chess, Mr. Spock. Poker!", new Date()));
         emails.add(new Email("riveting", "Picard", "TenForward.listServe", "Come chear up my lads 'tis to glory we steer!", new Date()));
         emails.add(new Email("Anomaly in the delta quadrant", "Com. Data", "Captain Picard", "Captain, we are picking up unusual readings in the delta quadrant.", new Date()));
-        emails.add(new Email("msg1", "Jim", "Spoke", "Not chess, Mr. Spock. Poker!", new Date()));
-        emails.add(new Email("msg2", "Jim", "Spoke", "Not chess, Mr. Spock. Poker!", new Date()));
-        emails.add(new Email("msg3", "Jim", "Spoke", "Not chess, Mr. Spock. Poker!", new Date()));
-        emails.add(new Email("msg4", "Jim", "Spoke", "Not chess, Mr. Spock. Poker!", new Date()));
-        emails.add(new Email("msg5", "Jim", "Spoke", "Not chess, Mr. Spock. Poker!", new Date()));
+        emails.add(new Email("msg1", "Jim", "Spock", "Not chess, Mr. Spock. Poker!", new Date()));
+        emails.add(new Email("msg2", "Jim", "Spock", "Not chess, Mr. Spock. Poker!", new Date()));
+        emails.add(new Email("msg3", "Jim", "Spock", "Not chess, Mr. Spock. Poker!", new Date()));
+        emails.add(new Email("msg4", "Jim", "Spock", "Not chess, Mr. Spock. Poker!", new Date()));
+        emails.add(new Email("msg5", "Jim", "Spock", "Not chess, Mr. Spock. Poker!", new Date()));
 
         ListView listView = findViewById(R.id.listView);
         EmailAdapter adapter = new EmailAdapter(this, R.layout.email_item_layout, emails);
