@@ -20,7 +20,8 @@
         <activity android:name=".SimpleObjectArrayListView" />
         <activity android:name=".UpdateArrayList" />
         <activity android:name=".EmailExample" />
-        <activity android:name=".CartoonCharRecylcerViewExample"></activity>
+        <activity android:name=".CartoonCharRecylcerViewExample" />
+        <activity android:name=".DessertGridViewExample"></activity>
     </application>
 
 </manifest>

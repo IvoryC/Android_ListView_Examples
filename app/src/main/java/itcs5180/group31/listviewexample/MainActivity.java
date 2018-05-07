@@ -52,5 +52,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        findViewById(R.id.bGridView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, DessertGridViewExample.class);
+                startActivity(i);
+            }
+        });
     }
 }
