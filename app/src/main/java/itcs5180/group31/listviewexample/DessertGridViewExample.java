@@ -2,6 +2,9 @@ package itcs5180.group31.listviewexample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -29,8 +32,40 @@ public class DessertGridViewExample extends AppCompatActivity {
         desserts.get(desserts.size()-1).imgUrl = "http://www.chowstatic.com/assets/recipe_photos/30175_easy_pumpkin_pie.jpg";
 
         GridView gridView = findViewById(R.id.gridView);
-        DessertAdapter adapter = new DessertAdapter(this, R.layout.dessert_item_grid_layout, desserts);
+        final DessertAdapter adapter = new DessertAdapter(this, R.layout.dessert_item_grid_layout, desserts);
 
         gridView.setAdapter(adapter);
+
+        final EditText etName = findViewById(R.id.etName);
+        final EditText etCalories = findViewById(R.id.etCalories);
+
+        findViewById(R.id.bAdd).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean valid = true;
+                if (etName.getText().length() < 1){
+                    valid = false;
+                }
+                if (etCalories.getText().length() < 1){
+                    valid = false;
+                }
+                if (valid){
+                    desserts.add(new Dessert(String.valueOf(etName.getText()), Integer.parseInt(String.valueOf(etCalories.getText()))));
+                    adapter.notifyDataSetChanged();
+                    etName.setText("");
+                    etCalories.setText("");
+                }
+            }
+        });
+
+        gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Dessert toRemove = adapter.getItem(position);
+                adapter.remove(toRemove);
+                adapter.notifyDataSetChanged();
+                return true;
+            }
+        });
     }
 }
