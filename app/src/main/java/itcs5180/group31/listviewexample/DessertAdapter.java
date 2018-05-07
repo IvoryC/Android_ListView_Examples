@@ -39,6 +39,7 @@ public class DessertAdapter extends ArrayAdapter<Dessert> {
 
         tvName.setText(dessert.name);
         tvCalories.setText(String.valueOf(dessert.calories));
+
         if (dessert.imgUrl != null){
             Log.d("picasso", "placing image:" + dessert.imgUrl);
             Picasso.with(getContext()).load(dessert.imgUrl).fit().into(imageView);
